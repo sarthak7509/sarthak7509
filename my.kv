@@ -1,0 +1,55 @@
+ScreenManager:
+    MainScreen:
+    SecondScreen:
+
+<MainScreen>:
+    name: "First"
+    weight:weight
+    hei:hei
+    GridLayout:
+        cols: 1
+        GridLayout:
+            cols: 2
+            Label:
+                text: "Weight"
+            FloatLayout:
+                TextInput:
+                    size_hint: 0.7,0.14
+                    pos_hint: {"x":0.3, "top":0.6}
+                    id: weight
+                    multiline:False
+            Label:
+                text: "Height"
+            FloatLayout:
+                TextInput:
+                    size_hint: 0.7,0.14
+                    pos_hint: {"x":0.3, "top":0.6}
+                    id: hei
+                    multiline:False
+        Button:
+            pos_hint: {"x": 0, "y":0}
+            size_hint: 0.5,0.2
+            text: "next"
+
+
+    FloatLayout:
+        Button:
+            pos_hint: {"x":0, "top":1}
+            size_hint: 0.2,0.1
+            text: "|||"
+            on_release:
+                app.root.current = "second"
+                root.manager.transition.direction = "right"
+
+<SecondScreen>:
+    name: "second"
+    Label:
+        text: "Welcome"
+    FloatLayout:
+        Button:
+            pos_hint: {"x":0.8, "top":1}
+            size_hint: 0.2,0.1
+            text: ">"
+            on_release:
+                app.root.current = "First"
+                root.manager.transition.direction = "left"
