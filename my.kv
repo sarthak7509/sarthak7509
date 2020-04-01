@@ -1,0 +1,123 @@
+<P>:
+    name: "pop1"
+    Label:
+        text: "Weight And Height Cannot Be Empty :("
+        size_hint: 0.5,0.4
+        pos_hint: {"x":0.1, "top":0.7}
+
+
+<C>:
+    Label:
+        text: "Weight Cannot Be Zero:("
+        size_hint: 0.8,0.4
+        pos_hint: {"x":0.1, "top": 0.7}
+
+<Image>:
+    size: root.width , root.height
+
+<MainScreen>:
+    name: "First"
+    weight:weight
+    hei:hei
+    ScrollView:
+        do_scroll_x: True
+        do_scroll_y: False
+    GridLayout:
+        cols: 1
+        GridLayout:
+            cols: 2
+            Label:
+                text: "Weight"
+            FloatLayout:
+                TextInput:
+                    size_hint: 0.7,0.14
+                    pos_hint: {"x":0.3, "top":0.6}
+                    id: weight
+                    multiline:False
+                    hint_text: "in kg"
+
+
+            Label:
+                text: "Height"
+            FloatLayout:
+                TextInput:
+                    size_hint: 0.7,0.14
+                    pos_hint: {"x":0.3, "top":0.6}
+                    id: hei
+                    multiline:False
+                    hint_text: "in cm"
+        Button:
+            pos_hint: {"x": 0, "y":0}
+            size_hint: 0.5,0.2
+            opacity: 1
+            background_color:0.5,1,1,0.5
+            font_size:25
+            text: "next"
+            on_release:
+                root.btn()
+                root.manager.transition.direction = "left"
+
+
+
+    FloatLayout:
+        Button:
+            pos_hint: {"x":0, "top":1}
+            size_hint: 0.2,0.1
+            text: "|||"
+            on_release:
+                app.root.current = "second"
+                root.manager.transition.direction = "right"
+
+<SecondScreen>:
+    name: "second"
+    Label:
+        text: "Welcome"
+    FloatLayout:
+        Button:
+            pos_hint: {"x":0.8, "top":1}
+            size_hint: 0.2,0.1
+            text: ">"
+            on_release:
+                app.root.current = "First"
+                root.manager.transition.direction = "left"
+
+<ThirdScreen>:
+    name: "third"
+    ScrollView:
+        do_scroll_x: True
+        do_scroll_y: False
+    FloatLayout:
+        Button:
+            text: "<"
+            font_size: 20
+            pos_hint:{"x": 0, "top":1}
+            size_hint:0.2,0.1
+            on_release:
+                root.btn2()
+                root.manager.transition.direction = "right"
+        Label:
+            text : "UNDER WEIGHT!!!"
+            font_size: 30
+            size_hint: 0.3,0.2
+            color: 1,0,1,1
+            pos_hint: {"x":0.4, "top": 1}
+        Button:
+            text: "1) Gain Weight"
+            font_size: 15
+            size_hint: 0.3,0.09
+            pos_hint: {"x": 0, "top": 0.6}
+        Button:
+            text: "2) Body Building"
+            font_size: 15
+            size_hint: 0.3, 0.09
+            pos_hint: {"x": 0 , "top": 0.5}
+
+<FourthScreen>:
+    name: "fourth"
+    Label:
+        text: "hi jii"
+
+<FifthScreen>:
+    name: "five"
+    Label:
+        text: "momo"
