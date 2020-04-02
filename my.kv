@@ -1,0 +1,237 @@
+<P>:
+    name: "pop1"
+    Label:
+        text: "Weight And Height\nCannot Be Empty :("
+        size_hint: 0.5,0.4
+        pos_hint: {"x":0.1, "top":0.7}
+
+
+<C>:
+    Label:
+        text: "Weight Cannot Be Zero:("
+        size_hint: 0.8,0.4
+        pos_hint: {"x":0.1, "top": 0.7}
+
+<Image>:
+    size: root.width , root.height
+
+<MainScreen>:
+    name: "First"
+    weight:weight
+    hei:hei
+    ScrollView:
+        do_scroll_x: True
+        do_scroll_y: False
+    GridLayout:
+        cols: 1
+        GridLayout:
+            cols: 2
+            Label:
+                text: "Weight"
+                font_size: 35
+            FloatLayout:
+                TextInput:
+                    size_hint: 0.8,0.14
+                    pos_hint: {"x":0.1, "top":0.6}
+                    id: weight
+                    multiline:False
+                    hint_text: "in kg"
+
+
+            Label:
+                text: "Height"
+                font_size: 35
+            FloatLayout:
+                TextInput:
+                    size_hint: 0.8,0.14
+                    pos_hint: {"x":0.1, "top":0.6}
+                    id: hei
+                    multiline:False
+                    hint_text: "in cm"
+        Button:
+            pos_hint: {"x": 0, "y":0}
+            size_hint: 0.5,0.2
+            opacity: 1
+            background_color:0.5,1,1,0.5
+            font_size:50
+            text: "next"
+            on_release:
+                root.btn()
+                root.manager.transition.direction = "left"
+
+
+
+    FloatLayout:
+        Button:
+            pos_hint: {"x":0, "top":1}
+            size_hint: 0.2,0.1
+            text: "|||"
+            on_release:
+                app.root.current = "second"
+                root.manager.transition.direction = "right"
+
+<SecondScreen>:
+    name: "second"
+    Label:
+        text: "Welcome"
+        font_size:50
+    FloatLayout:
+        Button:
+            pos_hint: {"x":0.8, "top":1}
+            size_hint: 0.2,0.1
+            text: ">"
+            on_release:
+                app.root.current = "First"
+                root.manager.transition.direction = "left"
+        Button:
+            text: "Help?"
+            font_size: 45
+            size_hint: 1,0.2
+            pos_hint: {"x": 0, "y":0}
+            on_release:
+                root.btn5()
+                root.manager.transition.direction = "up"
+
+
+
+<ThirdScreen>:
+    name: "third"
+    ScrollView:
+        do_scroll_x: True
+        do_scroll_y: False
+    FloatLayout:
+        Button:
+            text: "<"
+            font_size: 30
+            pos_hint:{"x": 0, "top":1}
+            size_hint:0.2,0.1
+            on_release:
+                root.btn2()
+                root.manager.transition.direction = "right"
+        Label:
+            text : "UNDER WEIGHT!!!"
+            font_size: 45
+            size_hint: 0.3,0.2
+            color: 1,0,1,1
+            pos_hint: {"x":0.4, "top": 1}
+        Button:
+            text: "1) Gain Weight."
+            font_size: 33
+            size_hint: 0.43,0.09
+            pos_hint: {"x": 0, "top": 0.6}
+        Button:
+            text: "2) Stamina Boost."
+            font_size: 33
+            size_hint: 0.43, 0.09
+            pos_hint: {"x": 0 , "top": 0.5}
+
+<FourthScreen>:
+    name: "fourth"
+    FloatLayout:
+        Button:
+            text: "<"
+            font_size: 30
+            pos_hint:{"x": 0, "top":1}
+            size_hint:0.2,0.1
+            on_release:
+                root.btn3()
+                root.manager.transition.direction = "right"
+        Label:
+            text : "Normal:)"
+            font_size: 45
+            size_hint: 0.3,0.2
+            color: 1,0,1,1
+            pos_hint: {"x":0.4, "top": 1}
+        Button:
+            text: "1) Abs Workout"
+            font_size: 33
+            size_hint: 0.43,0.09
+            pos_hint: {"x": 0, "top": 0.6}
+        Button:
+            text: "2) Chest Workout"
+            font_size: 33
+            size_hint: 0.43, 0.09
+            pos_hint: {"x": 0 , "top": 0.5}
+        Button:
+            text: "3) Biceps/Triceps Workout"
+            font_size: 33
+            size_hint: 0.43, 0.09
+            pos_hint: {"x": 0 , "top": 0.4}
+<FifthScreen>:
+    name: "five"
+    FloatLayout:
+        Button:
+            text: "<"
+            font_size: 30
+            pos_hint:{"x": 0, "top":1}
+            size_hint:0.2,0.1
+            on_release:
+                root.btn4()
+                root.manager.transition.direction = "right"
+        Label:
+            text : "Over Weight!!!"
+            font_size: 45
+            size_hint: 0.3,0.2
+            color: 1,0,1,1
+            pos_hint: {"x":0.4, "top": 1}
+        Button:
+            text: "1) Weight Loose"
+            font_size: 33
+            size_hint: 0.43,0.09
+            pos_hint: {"x": 0, "top": 0.6}
+        Button:
+            text: "2) Chest Workout"
+            font_size: 33
+            size_hint: 0.43, 0.09
+            pos_hint: {"x": 0 , "top": 0.5}
+        Button:
+            text: "3) Belly Fat Reduction"
+            font_size: 33
+            size_hint: 0.43, 0.09
+            pos_hint: {"x": 0 , "top": 0.4}
+        Button:
+            text: "4) Biceps/Triceps Workout"
+            font_size: 33
+            size_hint: 0.43, 0.09
+            pos_hint: {"x": 0 , "top": 0.3}
+
+<SixScreen>
+    name: "six"
+    que:que
+    ans:ans
+    GridLayout:
+        cols:1
+        GridLayout:
+            cols:2
+            Label:
+                text: "Question"
+                font_size: 30
+            TextInput:
+                hint_text:  "How May I Help You"
+                multilines: True
+                id:que
+
+            Label:
+                text: "@Sarthak"
+                font_size: 30
+            TextInput:
+                multilines: True
+                id:ans
+        Button:
+            text: "Ask"
+            font_size: 40
+            size_hint:1,0.2
+            on_press: root.answere()
+
+
+    FloatLayout:
+        Button:
+            text: "<"
+            font_size: 30
+            pos_hint:{"x": 0, "top":1}
+            size_hint:0.2,0.1
+            on_release:
+                root.btn6()
+                root.manager.transition.direction = "right"
+
+
