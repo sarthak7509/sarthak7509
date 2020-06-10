@@ -1,0 +1,60 @@
+<MainScreen>:
+    cov:m
+    lab:lab
+    tab:tab
+    fab:fab
+    BoxLayout:
+        orientation: "vertical"
+        MDToolbar:
+            title: "Covid-19 Cases"
+            halign: 'center'
+            left_action_items: [["menu", lambda x: app.btn()]]
+            md_bg_color:app.theme_cls.primary_dark
+            elevation: 12
+
+        MDLabel:
+
+    FloatLayout:
+        MDTextField:
+            id: m
+            hint_text: "type state code"
+            pos_hint: {"center_x": 0.3, "center_y": .8}
+            multiline: False
+            size_hint: 0.4,0.1
+            required: True
+            color_mode: 'custom'
+            line_color_focus: .3, .5, 1, 1
+            on_text: self.foreground_color = (1,0,0,1)
+            icon_right: "account-arrow-left"
+
+        MDLabel:
+            id: lab
+            font_size:70
+            halign: 'center'
+            pos_hint: {"center_x": 0.5,"center_y": .6}
+            theme_text_color: "Custom"
+            text_color: .3, 0, 1, 1
+
+        MDLabel:
+            id: tab
+            font_size:70
+            halign: 'center'
+            pos_hint: {"center_x": 0.5,"center_y": .5}
+            theme_text_color: "Custom"
+            text_color: .3, 0, 1, 1
+
+        MDLabel:
+            id: fab
+            font_size:70
+            halign: 'center'
+            pos_hint: {"center_x": 0.5,"center_y": .4}
+            theme_text_color: "Custom"
+            text_color: .3, 0, 1, 1
+
+        MDRoundFlatButton:
+            text: "Enter"
+            halign: 'center'
+            font_size: 30
+            size_hint: 0.3,0.09
+            pos_hint: {"center_x": .7, "center_y": .8}
+            on_release: root.m()
