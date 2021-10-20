@@ -1,5 +1,7 @@
-### Hi there 👋, my name is Sarthak
-[<img src='https://cdn-icons-png.flaticon.com/512/270/270798.png' alt='github' height='40'>](https://github.com/sarthak7509)  [<img src='https://cdn-icons-png.flaticon.com/512/124/124011.png' alt='linkedin' height='40'>](https://www.linkedin.com/in/sarthak-bhatnagar-95973b192/)  [<img src='https://cdn-icons-png.flaticon.com/512/888/888873.png' alt='googleplay' height='40'>](https://play.google.com/store/apps/developer?id=Sarthak+Bhatnagar) 
+![Sarthak Bhatnagar](Sarthak%20Bhatnagar%20(1).png)
+<br>
+
+[<img src='https://cdn-icons-png.flaticon.com/512/270/270798.png' alt='github' height='40'>](https://github.com/sarthak7509)    [<img src='https://cdn-icons-png.flaticon.com/512/124/124011.png' alt='linkedin' height='40'>](https://www.linkedin.com/in/sarthak-bhatnagar-95973b192/)    [<img src='https://cdn-icons-png.flaticon.com/512/888/888873.png' alt='googleplay' height='40'>](https://play.google.com/store/apps/developer?id=Sarthak+Bhatnagar) 
 
 - 🔭 I’m currently working on Audio generation using VAE 
 - 🌱 I’m currently learning Machine learning and android development 
