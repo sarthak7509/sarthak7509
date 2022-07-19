@@ -10,7 +10,7 @@
 
 ## 🙋‍♂️ About Me:
 
-- 🔭 I’m currently working on Audio generation using VAE 
+- 🔭 I’m currently working on Audio and signal processing
 - 🌱 I’m currently learning Machine learning and android development 
 - 👯 I’m looking to collaborate on Research 
 - 💬 Ask me about anything related to machine learning 
